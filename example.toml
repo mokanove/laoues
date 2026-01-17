@@ -1,0 +1,33 @@
+[log]
+#laoues标准日志文件格式
+write=true
+#是否写入日志
+level="info"
+#日志等级 有none info warn error四个等级
+path="./laoues.log"
+#写入路径
+time=true
+#在日志最前面写入当前时间 如无特殊设置 默认使用操作系统时间 并自动加入时区代码 （如CST：中国标准时间）
+#如果time设置为 true 则用时区代码 
+#如果是"utc" 则直接写入UTC偏移量
+#如果是false 关闭日志写入时间
+[dns]
+mode="realip"
+#这里有三种DNS模式 realip fakeip和hijack-route
+default="local"
+#默认出站DNS 未匹配到任何规则时使用
+tag="default-dns"
+#指定默认出站的标签名 方便rule
+strategy="follow_system"
+#默认域名解析策略 可选：prefer_ipv4 prefer_ipv6 ipv4_only ipv6_only follow_system
+cache=true
+#DNS缓存设置 设置为true时按DNS返回TTL指定 未返回时统一为10分钟 还可以设置为时间 单位：秒
+expire=true
+#缓存是否过期
+independent_cache=true
+#缓存是否独立
+always="ip"
+#总是把域名解析为X后再处理 X可以是ip、domian 设置为domian或未设置时 根据rule部分处理此项
+#设置为fakeip模式时 此项必须为domian 否则无法完成代理
+sniffing=true
+#起用它时 任何目标IP字段将被忽略 laoues会用深度包检测把目标字段还原为域名 由远程DNS再次进行解析处理 和fakeip冲突 启用他了就变成realip了
