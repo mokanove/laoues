@@ -1,0 +1,8 @@
+# laoues的配置文件由以下部分构成
+[log]
+[dns]
+[inbounds]
+[outbounds]
+[rule]
+# 这些是一个代理工具最少的要求了
+# 至于特殊功能或插件？laoues这辈子不可能支持一点
