@@ -6,7 +6,7 @@
 >
 > License: GPL-V3 by default unless otherwise specified
 
-[Official Website](https://867678.xyz/projects/moixa) [简体中文版](moixa介绍.md)
+[Official Website](https://867678.xyz/projects/moixa) [简体中文版](laoues介绍.md)
 
 ## Quick Start
 
