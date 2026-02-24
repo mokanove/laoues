@@ -1,4 +1,13 @@
-# laoues标准配置文件格式 更新日期 2026-01-23
+# laoues标准配置文件格式 更新日期 2026-02-25
+# laoues的配置文件由以下部分构成
+[log]
+[dns]
+[inbounds]
+[outbounds]
+[rule]
+# 它仅包含一个代理工具的最小化配置文件
+# 至于特殊功能或插件？laoues这辈子不可能支持一点
+# 以下是标准示例
 [log]
 write=true
 #是否写入日志
@@ -69,6 +78,7 @@ password="a strong password"
 [rule.cn-ip]
 type="remote"
 url="https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo-lite/geoip/cn.srs"
+#这里直接通用singbox的srs格式
 outbounds="ss-out-01"
 hit="direct"
 #设置为direct时laoues不会接管 以提升性能 所以DNS就没用了
@@ -77,4 +87,4 @@ path="a good address"
 hit="::"
 outbounds="ss-out-01"
 dns="remote-dns"
-#规则集请参阅867678.xyz/projects/laoues 上方为绕过大陆模式
+#规则集请参阅867678.xyz/projects/laoues 这里演示绕过大陆模式
